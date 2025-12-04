@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{994C7CB8-9AAD-4207-A5C9-FE0982470C86}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOC25", ".\AOC25.csproj", "{BA83E036-3FF8-412A-9C3C-BE23DBAB7CFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA83E036-3FF8-412A-9C3C-BE23DBAB7CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA83E036-3FF8-412A-9C3C-BE23DBAB7CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA83E036-3FF8-412A-9C3C-BE23DBAB7CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA83E036-3FF8-412A-9C3C-BE23DBAB7CFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
