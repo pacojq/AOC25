@@ -7,4 +7,10 @@ public static class FileUtil
         string absolutePath = Path.Combine(AppContext.BaseDirectory, path);
         return File.ReadAllLines(absolutePath);
     }
+    
+    public static string ReadContent(string path)
+    {
+        string absolutePath = Path.Combine(AppContext.BaseDirectory, path);
+        return File.ReadAllText(absolutePath);
+    }
 }
