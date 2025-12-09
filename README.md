@@ -9,7 +9,7 @@ You can here find my entries for the 2025 calendar.
 | Day | Puzzle 1 | Puzzle 2 |
 | :-: | :------: | :------: |
 | 01  |  :star:  |  :star:  |
-| 02  |  :star:  |          |
+| 02  |  :star:  |  :star:  |
 | 03  |          |          |
 | 04  |          |          |
 | 05  |          |          |

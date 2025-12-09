@@ -1,6 +1,6 @@
 ﻿namespace AOC25.Day2;
 
-public static class Problem1
+public static class Problem2
 {
     public static void Solve(string inputPath)
     {
@@ -16,9 +16,7 @@ public static class Problem1
                 out long valueEnd,
                 split[i]);
 
-            invalidAdd += SolveRange(
-                valueStart,
-                valueEnd);
+            invalidAdd += SolveRange(valueStart, valueEnd);
         }
 
         Console.WriteLine(invalidAdd);
@@ -47,9 +45,7 @@ public static class Problem1
         outValueEnd = valueEnd;
     }
 
-    private static long SolveRange(
-        long valueStart,
-        long valueEnd)
+    private static long SolveRange(long valueStart, long valueEnd)
     {
         long invalidAdd = 0;
         for (long value = valueStart; value <= valueEnd; value++)
@@ -64,26 +60,36 @@ public static class Problem1
 
     private static bool IsValid(long number)
     {
-        int length = (int)Math.Log10(number) + 1;
-        if (length % 2 != 0)
+        int log = 1;
+        long pow = 10;
+        while (pow < number)
+        {
+            if (!IsValid(number, pow, log))
+            {
+                return false;
+            }
+            pow *= 10;
+            log++;
+        }
+        return true;
+    }
+
+    private static bool IsValid(long number, long pow, int log)
+    {
+        long divisor = number % pow;
+        if (Math.Log10(divisor) < log - 1) // substring starts with 0
         {
             return true;
         }
 
-        long pow = Pow10(length / 2);
-        long a = number % pow;
-        long b = number / pow;
-
-        return a != b;
-    }
-
-    private static long Pow10(int pow)
-    {
-        long n = 1;
-        for (int i = 0; i < pow; i++)
+        while (number > 0)
         {
-            n *= 10;
+            if (number % pow != divisor)
+            {
+                return true;
+            }
+            number /= pow;
         }
-        return n;
+        return false;
     }
 }
